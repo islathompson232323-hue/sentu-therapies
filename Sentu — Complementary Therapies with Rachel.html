@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sentu — Complementary Therapies with Rachel · South Hams &amp; Plymouth</title>
+<meta name="description" content="Insured, qualified holistic therapies in the South Hams and Plymouth, South Devon: pregnancy massage, lymphatic drainage massage, reflexology and reiki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0a0a; --ink:#f3ebe6; --mute:#9a8f8a; --line:rgba(243,235,230,.13);
+  --acc:#eab69f; --acc2:#c9826a; --glow:rgba(234,182,159,.35); --btn:#1a0f0b; --body:#c0b4ae;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0a0a}}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#faf4ef;--ink:#2a1d18;--mute:#7d6e67;--line:rgba(42,29,24,.14);--acc:#b0614a;--acc2:#8a4634;--glow:rgba(176,97,74,.25);--btn:#fff;--body:#5a4a43}}
+:root[data-theme="light"]{--bg:#faf4ef;--ink:#2a1d18;--mute:#7d6e67;--line:rgba(42,29,24,.14);--acc:#b0614a;--acc2:#8a4634;--glow:rgba(176,97,74,.25);--btn:#fff;--body:#5a4a43}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;height:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:var(--btn)}
+.label{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute);margin-bottom:5vh;display:block}
+
+nav{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:26px;padding:10px 12px 10px 22px;border:1px solid var(--line);border-radius:100px;background:color-mix(in srgb,var(--bg) 55%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:transform .6s var(--ease);width:max-content;max-width:calc(100vw - 24px)}
+nav.hide{transform:translate(-50%,-160%)}
+.logo{font-family:var(--serif);font-size:21px;white-space:nowrap}.logo i{color:var(--acc)}
+.links{display:flex;gap:22px;font-size:13px;color:var(--mute)}.links a:hover{color:var(--ink)}
+.pill{padding:9px 18px;border-radius:100px;background:var(--ink);color:var(--bg);font-size:13px;font-weight:400;white-space:nowrap}
+@media(max-width:760px){.links{display:none}nav{gap:14px}}
+
+.btn{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:100px;font-size:15px;font-weight:400;transition:box-shadow .5s,transform .5s var(--ease)}
+.btn.p{background:var(--acc);color:var(--btn)}.btn.p:hover{box-shadow:0 0 60px 6px var(--glow);transform:translateY(-2px)}
+.btn.g{border:1px solid var(--line)}.btn.g:hover{border-color:var(--acc);color:var(--acc)}
+.btn.xl{padding:24px 44px;font-size:clamp(16px,1.5vw,20px)}
+
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5vw 9vh;overflow:hidden;isolation:isolate}
+#fx,#fx2{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.aurora{position:absolute;inset:-20%;z-index:-2;filter:blur(70px)}
+.aurora b{position:absolute;border-radius:50%}
+.aurora b:nth-child(1){width:50vw;height:50vw;left:5%;top:5%;background:radial-gradient(circle,rgba(201,130,106,.42),transparent 65%);animation:dr1 22s ease-in-out infinite alternate}
+.aurora b:nth-child(2){width:40vw;height:40vw;right:0;top:25%;background:radial-gradient(circle,rgba(150,100,120,.35),transparent 65%);animation:dr2 28s ease-in-out infinite alternate}
+.aurora b:nth-child(3){width:30vw;height:30vw;left:40%;bottom:-10%;background:radial-gradient(circle,rgba(234,182,159,.25),transparent 65%);animation:dr1 30s ease-in-out infinite alternate-reverse}
+@keyframes dr1{to{transform:translate(12vw,8vh) scale(1.15)}}@keyframes dr2{to{transform:translate(-14vw,-6vh) scale(.9)}}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:14px;margin-bottom:3vh}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--acc);flex:none}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(54px,13.5vw,210px);line-height:.9;letter-spacing:-.035em}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}
+.ln>span{display:block;transform:translateY(112%) rotate(3deg);transform-origin:left bottom;transition:transform 1.4s var(--ease)}
+.loaded .ln>span{transform:none}.ln:nth-child(2)>span{transition-delay:.12s}
+h1 em,h2 em{color:var(--acc);font-style:italic}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:6vh;flex-wrap:wrap}
+.hero-foot p{max-width:440px;color:var(--body);font-size:clamp(15px,1.2vw,18px)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.fade{opacity:0;transform:translateY(24px);filter:blur(8px);transition:all 1.4s var(--ease) .7s}.loaded .fade{opacity:1;transform:none;filter:none}
+.float{position:absolute;right:6vw;top:15vh;width:min(24vw,330px);z-index:-1;opacity:0;transition:opacity 2s 1s}.loaded .float{opacity:1}
+.float svg{width:100%;height:auto;animation:bob 9s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-16px) rotate(2deg)}}
+.ring{position:absolute;border:1px solid var(--line);border-radius:50%;z-index:-1}
+@media(max-width:760px){.float{width:50vw;top:13vh;right:-6vw}}
+
+.statement{padding:26vh 5vw 20vh}
+.statement p{font-family:var(--serif);font-size:clamp(34px,6.2vw,100px);line-height:1.05;letter-spacing:-.02em;max-width:18em}
+.statement .w{display:inline-block;opacity:.14;filter:blur(8px);transition:opacity .5s,filter .5s;margin-right:.2em}
+.statement .w.on{opacity:1;filter:none}.statement .w.acc.on{color:var(--acc);font-style:italic}
+
+.hz{height:400vh;position:relative}
+.hz-in{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center}
+.hz-head{position:absolute;top:calc(13vh + env(safe-area-inset-top,0px));left:5vw;z-index:3}
+.hz-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,76px);letter-spacing:-.02em;line-height:1}
+.hz-track{display:flex;gap:6vw;padding:0 8vw 0 5vw;will-change:transform;margin-top:10vh}
+.panel{flex:0 0 auto;width:min(62vw,780px);height:min(56vh,500px);border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;justify-content:space-between}
+.panel .n{font-family:var(--serif);font-size:clamp(110px,19vw,280px);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--ink) 30%,transparent);transition:color .8s var(--ease),-webkit-text-stroke-color .8s}
+.panel:hover .n{color:var(--acc);-webkit-text-stroke-color:var(--acc)}
+.panel h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,56px);line-height:1}
+.panel p{color:var(--body);max-width:440px;margin-top:12px;font-size:clamp(14px,1.1vw,17px)}
+.progress{position:absolute;left:5vw;right:5vw;bottom:7vh;height:1px;background:var(--line)}
+.progress i{display:block;height:100%;background:var(--acc);transform-origin:left;transform:scaleX(0)}
+@media(max-width:760px){.panel{width:80vw;height:52vh}.hz{height:340vh}}
+
+.story{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;padding:16vh 5vw}
+.story .sticky{position:sticky;top:16vh;align-self:start}
+.story h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,116px);line-height:.95;letter-spacing:-.03em}
+.steps{display:flex;flex-direction:column;gap:18vh;padding-top:8vh}
+.step{border-left:1px solid var(--line);padding-left:clamp(20px,3vw,48px);position:relative}
+.step::before{content:"";position:absolute;left:-4px;top:12px;width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 20px var(--acc)}
+.step .big{font-family:var(--serif);font-size:clamp(70px,10vw,150px);line-height:.9;color:var(--acc);letter-spacing:-.04em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3vw,46px);margin:14px 0 10px}
+.step p{color:var(--body);max-width:440px}
+.reveal{opacity:0;transform:translateY(60px) scale(.97);filter:blur(12px);transition:all 1.3s var(--ease)}.reveal.in{opacity:1;transform:none;filter:none}
+@media(max-width:860px){.story{grid-template-columns:1fr}.story .sticky{position:relative;top:0}.steps{gap:12vh}}
+
+.ben{padding:18vh 5vw}
+.ben h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,76px);letter-spacing:-.02em;margin-bottom:7vh;line-height:1}
+.ben ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:5vw}
+.ben li{font-family:var(--serif);font-size:clamp(24px,2.8vw,42px);line-height:1.1;padding:3.4vh 0;border-top:1px solid var(--line);color:color-mix(in srgb,var(--ink) 55%,transparent);transition:color .5s,padding .7s var(--ease)}
+.ben li:hover{color:var(--acc);padding-left:1.4vw}
+.ben small{display:block;margin-top:5vh;color:var(--mute);font-size:14px;max-width:560px}
+@media(max-width:760px){.ben ul{grid-template-columns:1fr}}
+
+.trust{display:grid;grid-template-columns:1fr 1fr;border-block:1px solid var(--line)}
+.trust>div{padding:13vh 5vw}.trust>div+div{border-left:1px solid var(--line)}
+.areas{padding:0}.areas li{list-style:none;font-family:var(--serif);font-size:clamp(40px,6vw,96px);line-height:1.02;letter-spacing:-.03em;color:color-mix(in srgb,var(--ink) 38%,transparent);transition:color .5s,transform .7s var(--ease)}
+.areas li:hover{color:var(--acc);transform:translateX(16px)}.areas li.on{color:var(--ink)}
+.badge{display:flex;align-items:center;gap:18px;padding:22px 0;border-top:1px solid var(--line)}.badge:first-of-type{border-top:0}
+.seal{width:62px;height:62px;border-radius:50%;border:1px solid var(--acc);display:grid;place-items:center;color:var(--acc);font-size:11px;letter-spacing:.1em;flex:none;text-align:center;line-height:1.2}
+.badge b{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.2vw,32px);display:block;line-height:1.1}
+.badge .s{font-size:13px;color:var(--mute)}
+@media(max-width:860px){.trust{grid-template-columns:1fr}.trust>div+div{border-left:0;border-top:1px solid var(--line)}.trust>div{padding:10vh 6vw}}
+
+.voices{padding:20vh 5vw 14vh;overflow:hidden}
+.quote-big{font-family:var(--serif);font-size:clamp(30px,5vw,80px);line-height:1.06;letter-spacing:-.02em;max-width:17em;min-height:4.4em}
+.quote-big q{quotes:none;display:block;transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s}
+.quote-big q.out{opacity:0;transform:translateY(30px);filter:blur(10px)}
+.quote-big q::before{content:"“";color:var(--acc)}.quote-big q::after{content:"”";color:var(--acc)}
+.who{color:var(--mute);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-top:2vh}
+.rate{margin-top:10vh;display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:4vh}
+.rate b{font-family:var(--serif);font-weight:400;font-size:clamp(70px,11vw,170px);line-height:.85;color:var(--acc);letter-spacing:-.04em}
+.rate span{color:var(--body);max-width:260px}
+
+.final{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18vh 5vw 10vh;overflow:hidden;isolation:isolate}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(58px,15vw,250px);line-height:.88;letter-spacing:-.045em}
+.final p{margin:5vh 0;color:var(--body);max-width:460px}
+.cta-row.c{justify-content:center}
+footer{padding:6vh 5vw 5vh;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+.support{width:100%;font-size:12px;max-width:640px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.ln>span,.fade,.reveal{transform:none!important;opacity:1!important;filter:none!important}.statement .w{opacity:1;filter:none}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="#top" class="logo">Sentu <i>· Rachel</i></a>
+  <div class="links"><a href="#therapies">Therapies</a><a href="#pregnancy">Pregnancy</a><a href="#areas">Areas</a><a href="#voices">Reviews</a></div>
+  <a class="pill" href="#start">Get in touch</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="aurora"><b></b><b></b><b></b></div>
+  <canvas id="fx"></canvas>
+  <div class="ring" style="width:60vw;height:60vw;right:-14vw;top:-12vw"></div>
+  <div class="ring" style="width:36vw;height:36vw;right:4vw;top:4vw"></div>
+  <div class="float" aria-hidden="true">
+    <svg viewBox="0 0 300 300">
+      <defs><radialGradient id="pg" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#f6d3c2"/><stop offset=".6" stop-color="#d98d74"/><stop offset="1" stop-color="#7a3f33"/></radialGradient></defs>
+      <g fill="url(#pg)" opacity=".92"><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(0 150 150)"/><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(60 150 150)" opacity=".8"/><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(120 150 150)" opacity=".7"/><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(180 150 150)" opacity=".8"/><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(240 150 150)" opacity=".7"/><ellipse cx="150" cy="70" rx="38" ry="64" transform="rotate(300 150 150)" opacity=".8"/></g>
+      <circle cx="150" cy="150" r="22" fill="#f6d3c2"/>
+    </svg>
+  </div>
+
+  <span class="eyebrow fade">Complementary therapies · South Hams &amp; Plymouth</span>
+  <h1 aria-label="Time just for you.">
+    <span class="ln"><span>Time just</span></span>
+    <span class="ln"><span>for <em>you.</em></span></span>
+  </h1>
+  <div class="hero-foot">
+    <p class="fade">Insured, qualified holistic therapies with Rachel — massage, lymphatic drainage, reflexology and reiki, in the South Hams and Plymouth area of South Devon.</p>
+    <div class="cta-row fade">
+      <a class="btn p" href="#start">Message on WhatsApp <span>→</span></a>
+      <a class="btn g" href="#pregnancy">Pregnancy massage</a>
+    </div>
+  </div>
+</header>
+
+<section class="statement">
+  <span class="label">( 01 — Gentle care )</span>
+  <p id="stmt">Rachel enjoys working with women finding love for their bodies, and with people living with chronic conditions. <span class="acc">An hour that is all yours.</span></p>
+</section>
+
+<section class="hz" id="therapies">
+  <div class="hz-in">
+    <div class="hz-head"><span class="label" style="margin-bottom:2vh">( 02 — Therapies )</span><h2>What Rachel<br>offers</h2></div>
+    <div class="hz-track" id="hzT">
+      <article class="panel"><div class="n">01</div><div><h3>Pregnancy massage</h3><p>Qualified to give pregnancy massage from the second trimester, with a supportive pillow to cocoon your body and rest your bump comfortably.</p></div></article>
+      <article class="panel"><div class="n">02</div><div><h3>Massage</h3><p>A lovely, relaxing massage to ease tight, achy muscles, leaving you relaxed and refreshed.</p></div></article>
+      <article class="panel"><div class="n">03</div><div><h3>Lymphatic drainage</h3><p>LDM, a gentle technique offered alongside Rachel’s other holistic therapies.</p></div></article>
+      <article class="panel"><div class="n">04</div><div><h3>Reflexology &amp; reiki</h3><p>Calming, restorative therapies for body and mind, among the many holistic treatments Rachel is qualified in.</p></div></article>
+      <article class="panel"><div class="n">05</div><div><h3>Chronic conditions</h3><p>Rachel enjoys supporting people with chronic conditions, and women learning to love their bodies.</p></div></article>
+    </div>
+    <div class="progress"><i id="hzP"></i></div>
+  </div>
+</section>
+
+<section class="story" id="pregnancy">
+  <div class="sticky">
+    <span class="label">( 03 — Pregnancy massage )</span>
+    <h2>Keeping you <em>and baby</em> safe.</h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><div class="big">01</div><h3>From the second trimester</h3><p>Rachel is qualified to give pregnancy massages from the second trimester onwards.</p></div>
+    <div class="step reveal"><div class="big">02</div><h3>Healthcare team’s okay</h3><p>If you are under the care of a consultant or healthcare team, Rachel will need their okay to go ahead. Keeping you and your baby or babies safe, as you are precious.</p></div>
+    <div class="step reveal"><div class="big">03</div><h3>Cocooned and comfortable</h3><p>A pregnancy pillow cocoons your body, resting your bump comfortably and giving your upper leg a place to rest. Plus an hour of time just for you, to relax.</p></div>
+  </div>
+</section>
+
+<section class="ben">
+  <span class="label">( 04 — It may help )</span>
+  <h2>What pregnancy<br>massage <em>may help with</em></h2>
+  <ul>
+    <li class="reveal">Relaxation</li><li class="reveal">Reducing stress</li>
+    <li class="reveal">Helping you feel good</li><li class="reveal">Helping with sleeping</li>
+    <li class="reveal">Reducing joint pain</li><li class="reveal">Relieving tension</li>
+    <li class="reveal">Sciatic nerve pain, by massaging tight legs and glutes</li><li class="reveal">Swelling, through improved blood and lymph circulation</li>
+    <li class="reveal">Reducing tension headaches</li><li class="reveal">An hour just for you</li>
+  </ul>
+  <small>Benefits are possible, not guaranteed, and individual experiences vary.</small>
+</section>
+
+<section class="trust" id="areas">
+  <div>
+    <span class="label">( 05 — Areas covered )</span>
+    <ul class="areas"><li class="on">South Hams</li><li>Plymouth</li><li>South Devon</li></ul>
+  </div>
+  <div>
+    <span class="label">( 06 — Peace of mind )</span>
+    <div class="badge"><div class="seal">INS.</div><div><b>Fully insured</b><span class="s">Insured and qualified in many holistic therapies</span></div></div>
+    <div class="badge"><div class="seal">100%</div><div><b>100% recommend</b><span class="s">Based on 10 reviews</span></div></div>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <span class="label">( 07 — Kind words )</span>
+  <div class="quote-big"><q id="qt">She is so good at what she does and such a lovely person too.</q></div>
+  <div class="who" id="qw">— Shanine’s Nails &amp; Beauty</div>
+  <div class="rate"><b>100%</b><span>recommend Sentu, across 10 reviews.</span></div>
+</section>
+
+<section class="final" id="start">
+  <div class="aurora"><b></b><b></b><b></b></div>
+  <canvas id="fx2"></canvas>
+  <span class="label">( 08 — Begin )</span>
+  <h2>Book your<br><em>hour.</em></h2>
+  <p>Message Rachel on WhatsApp to ask a question or arrange a treatment.</p>
+  <div class="cta-row c"><a class="btn p xl" href="#start" id="wa">Message on WhatsApp <span>→</span></a></div>
+</section>
+
+<footer>
+  <span>© 2026 Sentu — Complementary Therapies with Rachel · South Hams &amp; Plymouth</span>
+  <a href="#top">Back to top ↑</a>
+  <p class="support">Massage and complementary therapies are not a substitute for medical care. If you are pregnant or have a health condition, please check with your healthcare team first.</p>
+</footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,mobile=innerWidth<760;
+requestAnimationFrame(()=>setTimeout(()=>document.body.classList.add('loaded'),150));
+let lastY=0;const nav=$('#nav');
+const st=$('#stmt');
+st.innerHTML=st.innerHTML.replace(/(<span class="acc">)([\s\S]*?)(<\/span>)|([^<\s]+)/g,(m,a,b,c,d)=>{
+  if(a)return b.trim().split(/\s+/).map(w=>`<span class="w acc">${w}</span>`).join(' ')+' ';
+  return d?`<span class="w">${d}</span> `:m});
+const words=$$('.w'),hz=$('.hz'),hzT=$('#hzT'),hzP=$('#hzP');
+let ticking=false;
+function onScroll(){
+  const y=scrollY;nav.classList.toggle('hide',y>lastY&&y>200);lastY=y;
+  const t=innerHeight*.82;words.forEach(w=>w.classList.toggle('on',w.getBoundingClientRect().top<t));
+  const r=hz.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight))),max=hzT.scrollWidth-innerWidth;
+  hzT.style.transform=`translate3d(${-p*max}px,0,0)`;hzP.style.transform=`scaleX(${p})`;
+  ticking=false;
+}
+if(!RM)addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+else hzT.style.overflowX='auto';
+addEventListener('resize',onScroll);onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+$$('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.08+'s';io.observe(el)});
+const Q=[["She is so good at what she does and such a lovely person too.","— Shanine’s Nails & Beauty"],["You leave feeling completely relaxed and refreshed.","— Shanine’s Nails & Beauty"],["Once you’ve had one, you’ll be looking forward to booking the next!","— Shanine’s Nails & Beauty"]];
+let qi=0;const qt=$('#qt'),qw=$('#qw');
+if(!RM)setInterval(()=>{qt.classList.add('out');setTimeout(()=>{qi=(qi+1)%Q.length;qt.textContent=Q[qi][0];qw.textContent=Q[qi][1];qt.classList.remove('out')},900)},5200);
+function particles(cv,n){
+  const c=cv.getContext('2d');let W,H,P=[];const dpr=Math.min(devicePixelRatio||1,2);
+  function size(){const r=cv.parentElement.getBoundingClientRect();W=cv.width=r.width*dpr;H=cv.height=r.height*dpr;
+    P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.6+.4)*dpr,vx:(Math.random()-.5)*.12*dpr,vy:-(Math.random()*.25+.05)*dpr,a:Math.random()*.5+.15}))}
+  size();addEventListener('resize',size);
+  let vis=true;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+  (function loop(){
+    if(vis){c.clearRect(0,0,W,H);for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.y<-5)p.y=H+5;if(p.x<-5)p.x=W+5;if(p.x>W+5)p.x=-5;
+      c.beginPath();c.arc(p.x,p.y,p.r,0,6.283);c.fillStyle=`rgba(240,200,180,${p.a})`;c.fill()}}
+    if(!RM)requestAnimationFrame(loop)})();
+}
+particles($('#fx'),mobile?35:80);particles($('#fx2'),mobile?30:60);
+})();
+</script>
+</body>
+</html>
